@@ -1,3 +1,4 @@
+#function to define and count the depth of the parenthesis
 def matched(str):
   count = 0
   max_count=0
@@ -14,6 +15,7 @@ def matched(str):
       return -1
   if(count==0):
       return max_count
+#an example of the function    
 
 f=matched("a)*(?")
 print(f)
