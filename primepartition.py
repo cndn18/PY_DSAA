@@ -15,5 +15,5 @@ def primepartition(m):
             if y in primelist:
                 return True
         return False
-y=primepartition(3432)
+y=primepartition(445)
 print(y)

@@ -1,0 +1,15 @@
+#import tkinter as tk
+from tkinter import*
+mainscreen=Tk()
+mainscreen.geometry("500x400")
+lbl=Label(mainscreen,text="username")
+lbl.config(font=("courier",18))
+lbl.grid(row=1,column=1)
+lbl2=Label(mainscreen,text="password")
+lbl2.config(font=("courier",18))
+lbl2.grid(row=2,column=1)
+ent1=Entry(mainscreen)
+ent1.grid(row=1,column=2)
+ent2=Entry(mainscreen)
+ent2.grid(row=2,column=2)
+mainscreen.mainloop()
