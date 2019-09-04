@@ -5,7 +5,7 @@ import tkinter.messagebox as tkMessageBox
 
 #DEVELOPED BY Chandan Kumar
 root = Tk()
-root.title("Contact List")
+root.title("Basic Information")
 width = 700
 height = 400
 screen_width = root.winfo_screenwidth()
@@ -102,7 +102,7 @@ def OnSelected(event):
     ADDRESS.set(selecteditem[5])
     CONTACT.set(selecteditem[6])
     UpdateWindow = Toplevel()
-    UpdateWindow.title("Contact List")
+    UpdateWindow.title("Update Info")
     width = 400
     height = 300
     screen_width = root.winfo_screenwidth()
@@ -124,7 +124,7 @@ def OnSelected(event):
     Female = Radiobutton(RadioGroup, text="Female", variable=GENDER, value="Female",  font=('arial', 14)).pack(side=LEFT)
     
     #===================LABELS==============================
-    lbl_title = Label(FormTitle, text="Updating Contacts", font=('arial', 16), bg="orange",  width = 300)
+    lbl_title = Label(FormTitle, text="Updating Information", font=('arial', 16), bg="orange",  width = 300)
     lbl_title.pack(fill=X)
     lbl_firstname = Label(ContactForm, text="Firstname", font=('arial', 14), bd=5)
     lbl_firstname.grid(row=0, sticky=W)
@@ -185,7 +185,7 @@ def AddNewWindow():
     ADDRESS.set("")
     CONTACT.set("")
     NewWindow = Toplevel()
-    NewWindow.title("Contact List")
+    NewWindow.title("New Information")
     width = 400
     height = 300
     screen_width = root.winfo_screenwidth()
@@ -207,7 +207,7 @@ def AddNewWindow():
     Female = Radiobutton(RadioGroup, text="Female", variable=GENDER, value="Female",  font=('arial', 14)).pack(side=LEFT)
     
     #===================LABELS==============================
-    lbl_title = Label(FormTitle, text="Adding New Contacts", font=('arial', 16), bg="#66ff66",  width = 300)
+    lbl_title = Label(FormTitle, text="New Student Info", font=('arial', 16), bg="#66ff66",  width = 300)
     lbl_title.pack(fill=X)
     lbl_firstname = Label(ContactForm, text="Firstname", font=('arial', 14), bd=5)
     lbl_firstname.grid(row=0, sticky=W)
@@ -258,15 +258,15 @@ MidRight.pack(side=RIGHT, pady=10)
 TableMargin = Frame(root, width=500)
 TableMargin.pack(side=TOP)
 #============================LABELS======================================
-lbl_title = Label(Top, text="Contact Management System", font=('arial', 16), width=500)
+lbl_title = Label(Top, text="Basic Student Database", font=('arial', 16), width=500)
 lbl_title.pack(fill=X)
 
 #============================ENTRY=======================================
 
 #============================BUTTONS=====================================
-btn_add = Button(MidLeft, text="+ ADD NEW", bg="#66ff66", command=AddNewWindow)
+btn_add = Button(MidLeft, text="+ ADD NEW", bg="blue", command=AddNewWindow)
 btn_add.pack()
-btn_delete = Button(MidRight, text="DELETE", bg="red", command=DeleteData)
+btn_delete = Button(MidRight, text="DELETE", bg="green", command=DeleteData)
 btn_delete.pack(side=RIGHT)
 
 #============================TABLES======================================
